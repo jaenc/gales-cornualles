@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Viaje: Cotswolds, Cornualles y Oxford</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 20px auto;
+            overflow: hidden;
+            padding: 25px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            background: #007bff; /* Azul primario */
+            color: #ffffff;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-bottom: 25px;
+            border-radius: 8px 8px 0 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+        .timeline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            background: #e9ecef;
+            padding: 15px;
+            margin-bottom: 35px;
+            border-radius: 6px;
+        }
+        .timeline a {
+            color: #007bff;
+            background-color: #ffffff;
+            border: 1px solid #007bff;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .timeline a:hover, .timeline a.active {
+            background-color: #007bff;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .day-section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background-color: #fdfdff; /* Un blanco ligeramente diferente */
+            border-left: 6px solid #007bff;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .day-section h2 {
+            color: #0056b3; /* Un azul más oscuro */
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 12px;
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+        .day-section h3 {
+            color: #343a40;
+            margin-top: 25px;
+            font-size: 1.4em;
+        }
+        ul {
+            list-style: none;
+            padding-left: 5px;
+        }
+        ul li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        ul li::before {
+            content: "➔"; /* Flecha como marcador */
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .google-maps-link {
+            display: inline-block;
+            background-color: #28a745; /* Verde para Google Maps */
+            color: white !important; /* Forzar color de texto */
+            padding: 9px 18px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .google-maps-link:hover {
+            background-color: #218838; /* Verde más oscuro al pasar el cursor */
+        }
+        .accommodation, .food, .highlight, .advice {
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 0.95em;
+        }
+        .accommodation { background-color: #e6f7ff; border-left: 4px solid #1890ff; } /* Azul claro */
+        .food { background-color: #f6ffed; border-left: 4px solid #52c41a; } /* Verde claro */
+        .highlight { background-color: #fffbe6; border-left: 4px solid #faad14; } /* Amarillo claro */
+        .advice { background-color: #e6f7ff; border-left: 4px solid #17a2b8; } /* Cian claro para consejos */
+
+        .accommodation strong, .food strong, .highlight strong, .advice strong {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+        .route-details { margin-top: 5px; font-style: italic; color: #555; }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            .timeline {
+                justify-content: flex-start; /* Alinea los botones a la izquierda en móvil */
+            }
+            .timeline a {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            .day-section h2 {
+                font-size: 1.5em;
+            }
+             .day-section h3 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Viaje Cotswolds, Cornualles y Oxford</h1>
+    </header>
+
+    <div class="container">
+        <div class="timeline">
+            <a href="#dia1">Día 1</a>
+            <a href="#dia2">Día 2</a>
+            <a href="#dia3">Día 3</a>
+            <a href="#dia4">Día 4</a>
+            <a href="#dia5">Día 5</a>
+            <a href="#dia6">Día 6</a>
+            <a href="#dia7">Día 7</a>
+            <a href="#dia8">Día 8</a>
+        </div>
+
+        <!-- Día 1 -->
+        <div id="dia1" class="day-section">
+            <h2>Día 1: Sábado, 28 de junio de 2025 - Llegada a la Magia de los Cotswolds</h2>
+            <p>La aventura comienza. El primer día es para aterrizar, aclimatarse y sumergirse directamente en el encanto de la Inglaterra rural.</p>
+            <ul>
+                <li><strong>16:00:</strong> Llegada al Aeropuerto de Bristol (BRS).</li>
+                <li><strong>16:00 - 17:30:</strong> Trámites de llegada y recogida del coche. Tómense su tiempo, sin prisas.</li>
+                <li><strong>17:30 - 18:45:</strong> Conducción escénica hacia el corazón de los Cotswolds.
+                    <div class="route-details">Ruta: Aeropuerto de Bristol → The Colesbourne Inn (Aprox. 1h 15m)</div>
+                    <a href="https://www.google.com/maps/dir/Bristol+Airport/The+Colesbourne+Inn,+Colesbourne,+Cheltenham+GL53+9NP" target="_blank" class="google-maps-link">Ver en Google Maps</a>
+                </li>
+            </ul>
+            <div class="accommodation">
+                <strong>Alojamiento:</strong> The Colesbourne Inn, Colesbourne, GL53 9NP.
+            </div>
+            <h3>Tarde/Noche:</h3>
+            <ul>
+                <li>Check-in y momento para relajarse. Abran las ventanas y respiren el aire fresco de la campiña.</li>
+            </ul>
+            <div class="food">
+                <strong>Cena:</strong> La opción más sabia y placentera es el restaurante de vuestro propio Inn. Es un pub histórico con excelentes críticas. Reserven con antelación para asegurar vuestra mesa.
+            </div>
+            <div class="highlight">
+                <strong>Toque de Ensueño ✨:</strong> Pidan una pinta de ale local (cerveza de barril) y siéntense junto a la chimenea o en el jardín si el tiempo acompaña. Es la bienvenida perfecta a la vida de pub inglés.
+            </div>
+        </div>
+
+        <!-- Día 2 -->
+        <div id="dia2" class="day-section">
+            <h2>Día 2: Domingo, 29 de junio de 2025 - La "Venecia" y el Corazón de los Cotswolds</h2>
+            <p>Un día dedicado a algunos de los pueblos más icónicos y fotogénicos de la región. El ritmo es suave y las distancias cortas.</p>
+            <h3>Mañana (10:00 - 13:00): Bourton-on-the-Water</h3>
+            <ul>
+                <li>Tras un buen desayuno, conduzcan a Bourton-on-the-Water (aprox. 25 min).</li>
+                <li><strong>Actividad Principal:</strong> Paseen sin rumbo fijo a lo largo del río Windrush. Crucen sus famosos puentes de piedra y disfruten del ambiente. El centro es llano y muy accesible.</li>
+            </ul>
+            <div class="highlight">
+                <strong>Toque de Ensueño ✨:</strong> Visiten el Cotswold Motoring Museum. Es sorprendentemente entretenido, apto para todos los públicos y una actividad perfecta si el tiempo es inestable.
+            </div>
+            <h3>Almuerzo (13:00 - 14:30):</h3>
+            <div class="food">
+                <strong>Opción Económica y de Calidad:</strong> Bakery on the Water. Es ideal. Pueden comprar un delicioso <em>Cornish pasty</em> (empanada de carne y patata), un sándwich artesano o un <em>sausage roll</em> (hojaldre de salchicha) y sentarse en un banco junto al río. Es la postal perfecta y muy asequible.
+            </div>
+            <div class="food">
+                <strong>Opción Pub Tradicional:</strong> The Mousetrap Inn. Famoso por su Sunday Roast (asado de domingo). Si quieren la experiencia británica completa, este es el lugar. Reserven, es muy popular.
+            </div>
+            <h3>Tarde (14:30 - 17:00): Stow-on-the-Wold y Los Slaughters</h3>
+            <ul>
+                <li>Conduzcan a Stow-on-the-Wold (aprox. 10 min). Exploren su plaza del mercado y no se pierdan la famosa puerta de la Iglesia de St. Edward, flanqueada por dos tejos milenarios. ¡Parece sacada de "El Señor de los Anillos"!</li>
+                <li><strong>Opción Accesible y Tranquila ♿:</strong> Dediquen tiempo a Lower Slaughter. Es un desvío mínimo y vale oro. Es increíblemente tranquilo, plano y el paseo junto al riachuelo Eye hasta el antiguo molino es pura paz. Es, posiblemente, el pueblo más sereno de los Cotswolds.</li>
+            </ul>
+            <h3>Noche:</h3>
+            <ul>
+                <li>Regreso a The Colesbourne Inn.</li>
+            </ul>
+            <div class="food">
+                <strong>Cena:</strong> Pueden volver a cenar en el Inn o, para variar, prueben The Green Dragon Inn en el cercano pueblo de Cockleford, un pub del siglo XVII con un ambiente muy auténtico.
+            </div>
+            Ruta del Día:
+            <div class="route-details">The Colesbourne Inn → Bourton-on-the-Water → Lower Slaughter → Stow-on-the-Wold → The Colesbourne Inn (Aprox. 1h 10m de conducción total)</div>
+            <a href="https://www.google.com/maps/dir/The+Colesbourne+Inn/Bourton-on-the-Water/Lower+Slaughter/Stow-on-the-Wold/The+Colesbourne+Inn" target="_blank" class="google-maps-link">Ver Ruta del Día 2 en Google Maps</a>
+        </div>
+
+        <!-- Día 3 -->
+        <div id="dia3" class="day-section">
+            <h2>Día 3: Lunes, 30 de junio de 2025 - La Fila de Tejedores y la Capital Romana</h2>
+            <p>Hoy exploramos el sur de la región, combinando una joya de postal con una ciudad histórica llena de vida.</p>
+            <h3>Mañana (10:00 - 13:00): Bibury y Cirencester</h3>
+            <ul>
+                <li>Viaje a Bibury (aprox. 20 min).</li>
+                <li><strong>Actividad Principal:</strong> Diríjanse directamente a Arlington Row. Para obtener la mejor foto y evitar multitudes, intenten llegar antes de las 11:00. El camino principal es llano y el paseo es corto pero inolvidable.</li>
+                <li>Luego, conduzcan a Cirencester, la "Capital de los Cotswolds" (aprox. 15 min). Es una ciudad de mercado vibrante y mayormente plana en su centro.</li>
+            </ul>
+            <h3>Almuerzo (13:00 - 14:30) en Cirencester:</h3>
+            <div class="food">
+                <strong>Opción Económica y Deliciosa:</strong> Jacks. Sus tartas caseras, quiches y ensaladas son fantásticas. Es un lugar luminoso, agradable y con una excelente relación calidad-precio.
+            </div>
+            <div class="food">
+                <strong>Opción Clásica:</strong> The Bear Inn. Si buscan el ambiente de un pub con historia, vigas de madera y buena comida tradicional, es una apuesta segura.
+            </div>
+            <h3>Tarde (14:30 - 17:00):</h3>
+            <ul>
+                <li>Exploren el centro de Cirencester, especialmente su imponente iglesia y la animada Market Place.</li>
+            </ul>
+             <div class="highlight">
+                <strong>Toque de Ensueño ✨:</strong> En lugar de Painswick (que tiene cuestas), consideren una visita a Barnsley House. Aunque es un hotel de lujo, sus jardines, diseñados por la famosa Rosemary Verey, están abiertos al público (consulten horarios y precios). Es un paraíso de tranquilidad y belleza, muy accesible. Pueden tomar un té en su terraza.
+            </div>
+            <h3>Noche:</h3>
+            <ul>
+                <li>Regreso a The Colesbourne Inn (aprox. 15 min).</li>
+            </ul>
+            <div class="food">
+                <strong>Cena:</strong> Disfruten de la última noche en el Inn o exploren otra joya local como The Bell at Sapperton, conocido por su fantástica comida en un entorno precioso.
+            </div>
+             Ruta del Día:
+            <div class="route-details">The Colesbourne Inn → Bibury → Cirencester → Barnsley (opcional) → The Colesbourne Inn (Aprox. 1h de conducción total)</div>
+            <a href="https://www.google.com/maps/dir/The+Colesbourne+Inn/Bibury/Cirencester/Barnsley+House+Hotel,+Barnsley/The+Colesbourne+Inn" target="_blank" class="google-maps-link">Ver Ruta del Día 3 en Google Maps</a>
+        </div>
+
+        <!-- Día 4 -->
+        <div id="dia4" class="day-section">
+            <h2>Día 4: Martes, 1 de julio de 2025 - La Ciudad Universitaria y Rumbo al Oeste</h2>
+            <p>Día de transición. Nos despedimos de los Cotswolds, nos sumergimos en la historia académica de Oxford y nos posicionamos para la siguiente etapa.</p>
+            <h3>Mañana (09:30 - 15:00): Oxford</h3>
+            <ul>
+                <li>Check-out y viaje a Oxford (aprox. 1 hora).</li>
+            </ul>
+            <div class="advice">
+                 <strong>Consejo Clave ♿:</strong> NO conduzcan al centro. Usen el Pear Tree Park & Ride. Es barato, los autobuses son frecuentes, accesibles y les dejarán en el corazón de la ciudad sin estrés.
+            </div>
+            <ul>
+                <li><strong>Actividades Sugeridas:</strong>
+                    <ul>
+                        <li>Christ Church College: Es el más grandioso. Su gran comedor inspiró el de Hogwarts. El patio principal (Tom Quad) es grande y plano. Verifiquen la accesibilidad de las zonas interiores.</li>
+                        <li>Paseo Relajado: Recorran Broad Street y pasen por delante del Teatro Sheldonian y la Biblioteca Bodleiana.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="highlight">
+                <strong>Toque de Ensueño ✨:</strong> En lugar de caminar sin parar, consideren un paseo en "punt" por el río Cherwell. Es una barca de fondo plano que se impulsa con una pértiga. Pueden contratar un "chauffeur" para que lo haga por ustedes. Es una forma maravillosa, relajante y sentada de ver la ciudad desde otra perspectiva.
+            </div>
+            <h3>Almuerzo (13:00) en Oxford:</h3>
+            <div class="food">
+                <strong>Opción Icónica y Asequible:</strong> Vaults & Garden. Comida orgánica y deliciosa en un café con vistas espectaculares a la Radcliffe Camera. ¡Ubicación inmejorable!
+            </div>
+            <div class="food">
+                <strong>Opción Rápida:</strong> The Covered Market. Un mercado histórico lleno de puestos de comida. Ideal para que cada uno elija lo que le apetezca.
+            </div>
+            <h3>Tarde (15:00 - 16:45):</h3>
+            <ul>
+                <li>Viaje desde el Park & Ride de Oxford a vuestro siguiente alojamiento (aprox. 1h 30m - 1h 45m).
+                    <div class="route-details">Ruta: Pear Tree Park & Ride → The Old Coach House (Aprox. 1h 45m)</div>
+                    <a href="https://www.google.com/maps/dir/Pear+Tree+Park+and+Ride,+Oxford/The+Old+Coach+House,+Coalpit+Heath,+Bristol+BS36+2UY" target="_blank" class="google-maps-link">Ver en Google Maps</a>
+                </li>
+            </ul>
+            <div class="accommodation">
+                <strong>Alojamiento:</strong> The Old Coach House, Coalpit Heath, BS36 2UY.
+            </div>
+            <h3>Noche:</h3>
+            <ul>
+                <li>Check-in y descanso.</li>
+            </ul>
+            <div class="food">
+                <strong>Cena:</strong> The Badminton Arms en el mismo pueblo es una opción fantástica. Conocido por su <em>carvery</em> (buffet de carnes asadas), es comida casera, abundante y a buen precio. Perfecto para una cena reconfortante.
+            </div>
+        </div>
+
+        <!-- Día 5 -->
+        <div id="dia5" class="day-section">
+            <h2>Día 5: Miércoles, 2 de julio de 2025 - Elegancia Georgiana y el Llamado del Mar</h2>
+            <p>Un día de contrastes: la sofisticación de Bath por la mañana y el largo pero emocionante viaje hacia la costa salvaje de Cornualles.</p>
+            <h3>Mañana (09:30 - 13:30): Bath</h3>
+            <ul>
+                <li>Check-out y viaje corto a Bath (aprox. 30-40 min). Aparquen en un parking céntrico como SouthGate Bath Car Park, que es moderno y tiene ascensores.</li>
+                <li><strong>Actividades Imprescindibles (Mayormente Planas):</strong>
+                    <ul>
+                        <li>Termas Romanas: La visita es obligada y es accesible en un 90%. ¡Reserven online!</li>
+                        <li>Royal Crescent: Paseen por delante de esta icónica medialuna de casas georgianas. El parque de enfrente es perfecto para sentarse y admirar la arquitectura.</li>
+                        <li>Pulteney Bridge: Admiren el puente y el aliviadero desde la orilla.</li>
+                    </ul>
+                </li>
+                <li><strong>Alternativa Accesible ♿:</strong> El Hop-On Hop-Off Bus Tour es una idea excelente aquí. Les dará una visión general completa de la ciudad, incluyendo las zonas más elevadas, sin el esfuerzo de caminar.</li>
+            </ul>
+            <h3>Almuerzo (13:30) en Bath:</h3>
+            <div class="food">
+                <strong>Experiencia Única:</strong> Sally Lunn's Historic Eating House. Probar un "Sally Lunn Bunn" es un rito en Bath. Pídanlo salado (ej. con pollo a la crema) para un almuerzo contundente y delicioso en uno de los edificios más antiguos de la ciudad.
+            </div>
+            <div class="food">
+                <strong>Pub Clásico:</strong> The Raven. Famoso por sus <em>pies</em> (pasteles de carne). Comida británica auténtica y reconfortante.
+            </div>
+            <h3>Tarde (15:00 en adelante): Gran Viaje a Cornualles</h3>
+            <ul>
+                <li>Este es el trayecto más largo. Tómenselo con calma.</li>
+                <li>
+                    <div class="route-details">Ruta: Bath → The Harbour Inn, Porthleven (Aprox. 3h 45m sin paradas)</div>
+                     <a href="https://www.google.com/maps/dir/Bath/The+Harbour+Inn,+Porthleven,+TR13+9JB" target="_blank" class="google-maps-link">Ver en Google Maps</a>
+                </li>
+            </ul>
+            <div class="highlight">
+                <strong>Parada Recomendada:</strong> A mitad de camino, salgan de la autovía y paren en Jamaica Inn en Bodmin Moor. Es el pub inmortalizado por la novela de Daphne du Maurier. Hay un museo sobre la autora y el contrabando. Es una parada con historia, perfecta para estirar las piernas y tomar un café.
+            </div>
+            <h3>Noche:</h3>
+            <div class="accommodation">
+                Llegada y check-in en <strong>The Harbour Inn, Porthleven, TR13 9JB.</strong>
+            </div>
+            <div class="food">
+                <strong>Cena:</strong> No se compliquen. Cenen en vuestro propio hotel. Tiene vistas al puerto y buena comida. Tras el viaje, será un bálsamo.
+            </div>
+        </div>
+
+        <!-- Día 6 -->
+        <div id="dia6" class="day-section">
+            <h2>Día 6: Jueves, 3 de julio de 2025 - La Costa Más Salvaje y Teatral</h2>
+            <p>Hoy exploramos el extremo occidental de Inglaterra, una tierra de mitos, leyendas y paisajes marinos que quitan el aliento.</p>
+            <h3>Mañana (10:00 - 13:00): St Michael's Mount</h3>
+            <ul>
+                <li>Viaje corto a Marazion (aprox. 20 min).</li>
+            </ul>
+            <div class="advice">
+                <strong>Planificación Crucial ♿:</strong>
+                <ul>
+                    <li>Consulten el horario de las mareas en la web oficial de St Michael's Mount. Esto determinará si pueden cruzar a pie por la calzada (marea baja) o si necesitan el barco (marea alta).</li>
+                    <li>Accesibilidad: La subida al castillo es empinada y empedrada. Una opción excelente y sin estrés es <strong>no subir</strong>. Disfruten de las vistas espectaculares desde la playa de Marazion, paseen por el pueblo y visiten los jardines de la base de la isla si la marea lo permite. La experiencia es igual de mágica.</li>
+                </ul>
+            </div>
+            <h3>Almuerzo (13:00 - 14:30):</h3>
+            <div class="food">
+                <strong>Con Vistas:</strong> Jordan's Café en Marazion. Un café familiar sin pretensiones con vistas directas al monte. Sus sándwiches de cangrejo fresco son una delicia local.
+            </div>
+            <div class="food">
+                <strong>En Porthleven:</strong> Vuelvan a vuestro pueblo base y coman en The Ship Inn, un pub con carácter colgado sobre el muro del puerto.
+            </div>
+            <h3>Tarde (14:30 - 17:30): El Fin del Mundo y un Teatro de Acantilado</h3>
+            <ul>
+                <li>Conduzcan por la costa hacia el Minack Theatre (aprox. 40 min). ¡Reserven la entrada online solo para visitar! Es un lugar único en el mundo. Hay rutas accesibles para disfrutar de las vistas principales sin bajar todas las escaleras.</li>
+                <li><strong>Opción A:</strong> Visiten Land's End (a 15 min del Minack). Aunque es turístico, los senderos principales son accesibles y las vistas del acantilado son impresionantes.</li>
+            </ul>
+            <div class="highlight">
+                <strong>Toque de Ensueño ✨ (Opción B):</strong> En lugar de Land's End, vayan a St Ives (aprox. 30 min desde Porthleven). <strong>NO intenten aparcar en el centro.</strong> Aparquen en St Erth Park & Ride y tomen el tren panorámico de 10 minutos. El trayecto bordea la costa y es uno de los más bonitos de Gran Bretaña. St Ives tiene un ambiente artístico único, pero puede ser concurrido.
+            </div>
+            <h3>Noche:</h3>
+            <ul>
+                <li>Regreso a Porthleven.</li>
+            </ul>
+            <div class="food">
+                <strong>Cena de Marisco:</strong> Porthleven es un paraíso gastronómico. Dense un capricho en Amélie, un restaurante moderno junto al muelle, o para algo más informal, prueben el famoso puesto de Nauti But Ice para un fish & chips de calidad superior.
+            </div>
+            Ruta del Día:
+            <div class="route-details">Porthleven → Marazion → Minack Theatre → Land's End → Porthleven (Aprox. 2h de conducción total)</div>
+            <a href="https://www.google.com/maps/dir/Porthleven/Marazion/Minack+Theatre,+Porthcurno,+Penzance/Land's+End,+Sennen,+Penzance/Porthleven" target="_blank" class="google-maps-link">Ver Ruta del Día 6 en Google Maps</a>
+        </div>
+
+        <!-- Día 7 -->
+        <div id="dia7" class="day-section">
+            <h2>Día 7: Viernes, 4 de julio de 2025 - De la Costa a los Páramos Misteriosos</h2>
+            <p>Nos despedimos de la costa de Cornualles y nos adentramos en el paisaje evocador y salvaje del Parque Nacional de Dartmoor.</p>
+            <h3>Mañana (10:00 - 12:00): Mañana de Despedida en la Costa</h3>
+            <ul>
+                <li>Check-out de The Harbour Inn.</li>
+                <li><strong>Opción Relajada:</strong> Disfruten de una última mañana tranquila en Porthleven. Paseen por el otro lado del puerto, visiten sus galerías de arte o tomen un café viendo los barcos.</li>
+            </ul>
+            <h3>Almuerzo (12:30):</h3>
+            <div class="food">
+                Tomen un último <em>Cornish pasty</em> de una panadería local en Porthleven, como Ann's Pasties, considerada una de las mejores.
+            </div>
+            <h3>Tarde (14:00 - 16:00): Viaje a Dartmoor</h3>
+            <ul>
+                <li>Conduzcan hacia vuestro próximo destino. El paisaje cambiará drásticamente de costa a páramos.</li>
+                <li>
+                    <div class="route-details">Ruta: Porthleven → The Moorland Hotel, Haytor (Aprox. 1h 45m)</div>
+                    <a href="https://www.google.com/maps/dir/Porthleven/The+Moorland+Hotel,+Haytor+Vale,+Newton+Abbot+TQ13+9XT" target="_blank" class="google-maps-link">Ver en Google Maps</a>
+                </li>
+            </ul>
+            <div class="accommodation">
+                <strong>Alojamiento:</strong> The Moorland Hotel, Haytor, TQ13 9XT.
+            </div>
+            <h3>Tarde/Noche:</h3>
+            <ul>
+                <li>Check-in. El hotel tiene una ubicación espectacular.</li>
+            </ul>
+            <div class="highlight">
+                <strong>Actividad Accesible ♿✨:</strong> A un corto paseo o en coche desde el hotel se encuentra Haytor Rocks. Es uno de los "tors" (afloramientos de granito) más famosos y accesibles. No es necesario escalar; las vistas desde la base, con los ponis salvajes de Dartmoor pastando cerca, son la esencia del parque.
+            </div>
+            <div class="food">
+                <strong>Cena:</strong> Cenen en el restaurante del hotel para disfrutar de las vistas panorámicas del páramo al atardecer.
+            </div>
+            <div class="highlight">
+                <strong>Toque de Ensueño ✨:</strong> Si el cielo está despejado, salgan por la noche. Dartmoor es una reserva de cielo oscuro y la vista de las estrellas es sobrecogedora.
+            </div>
+        </div>
+
+        <!-- Día 8 -->
+        <div id="dia8" class="day-section">
+            <h2>Día 8: Sábado, 5 de julio de 2025 - Un Último Vistazo al Páramo y Regreso</h2>
+            <p>Un final tranquilo para el viaje, con tiempo suficiente para un último recuerdo y un viaje sin estrés al aeropuerto.</p>
+            <h3>Mañana (09:00 - 10:00):</h3>
+            <ul>
+                <li>Tras el desayuno, disfruten de las vistas desde el hotel o hagan una última visita a la base de Haytor Rocks para despedirse de los ponis.</li>
+            </ul>
+            <h3>Media Mañana (10:00):</h3>
+            <ul>
+                <li>Check-out de The Moorland Hotel.</li>
+            </ul>
+            <h3>10:00 - 12:15: Viaje al Aeropuerto de Bristol</h3>
+            <ul>
+                <li>Salgan con tiempo de sobra para evitar cualquier imprevisto.</li>
+                <li>
+                    <div class="route-details">Ruta: The Moorland Hotel → Aeropuerto de Bristol (Aprox. 2h)</div>
+                    <a href="https://www.google.com/maps/dir/The+Moorland+Hotel,+Haytor+Vale,+Newton+Abbot+TQ13+9XT/Bristol+Airport" target="_blank" class="google-maps-link">Ver en Google Maps</a>
+                </li>
+            </ul>
+             <div class="highlight">
+                <strong>Toque Final ✨:</strong> De camino, si ven una "Farm Shop" (tienda de granja) bien señalizada, hagan una parada rápida. Es el lugar perfecto para comprar quesos locales (Cheddar), mermeladas o <em>fudge</em> (caramelo cremoso) para llevarse un último sabor de Inglaterra a casa.
+            </div>
+            <h3>Resto del Día:</h3>
+            <ul>
+                <li><strong>12:15 - 13:15:</strong> Devolución del coche de alquiler.</li>
+                <li><strong>13:15 en adelante:</strong> Check-in, control de seguridad y almuerzo relajado en la terminal del aeropuerto.</li>
+                <li><strong>16:25:</strong> Salida del vuelo.</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Smooth scroll for timeline links
+        document.querySelectorAll('.timeline a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Optional: Add active class to clicked link
+                document.querySelectorAll('.timeline a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
